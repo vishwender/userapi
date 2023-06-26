@@ -61,6 +61,7 @@ class Users extends Controller
         }else{
             $token = $user->createToken('usertoken')->plainTextToken;
             $response = [
+            'user'=>$user,    
             'status'=>true,    
             'token'=>$token
             ];
